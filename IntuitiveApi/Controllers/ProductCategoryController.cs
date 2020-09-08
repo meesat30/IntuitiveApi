@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using IntuitiveApi.Data;
 using IntuitiveApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using LoggerService;
+
 
 namespace IntuitiveApi.Controllers
 {
@@ -12,10 +14,14 @@ namespace IntuitiveApi.Controllers
     public class ProductCategoryController: ControllerBase
     {
         private readonly DemoDBContext _db;
+        private ILoggerManager _logger;
+       
 
-        public ProductCategoryController(DemoDBContext db)
+
+        public ProductCategoryController(DemoDBContext db, ILoggerManager logger)
         {
             _db = db;
+            _logger = logger;
         }
 
         // Action Methods
@@ -23,6 +29,8 @@ namespace IntuitiveApi.Controllers
         [HttpGet]
         public IActionResult GetProductCategories()
         {
+            _logger.LogInfo("GetProductCategories");
+            _logger.LogDebug("DebugError");
             return Ok(_db.ProductCategories.ToList());
         }
 

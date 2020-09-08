@@ -6,6 +6,7 @@ using IntuitiveApi.Data;
 using IntuitiveApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using LoggerService;
 
 namespace IntuitiveApi.Controllers
 {
@@ -26,6 +27,7 @@ namespace IntuitiveApi.Controllers
         public IActionResult GetProduct()
 
         {
+           
             return Ok(_db.Products.Include(c => c.ProductCategory).ToList());
         }
 
@@ -60,7 +62,7 @@ namespace IntuitiveApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, Product objProduct)
         {
-            if (objProduct == null || id != objProduct.Productid)
+            if (objProduct == null || id != objProduct.ProductId)
             {
                 return new JsonResult("Product Was Not Found");
             }

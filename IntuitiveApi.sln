@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntuitiveApi", "IntuitiveApi\IntuitiveApi.csproj", "{B171013B-BE88-46B8-BB3C-6EB369887F16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "LoggerService\LoggerService.csproj", "{44D06EBD-7BF3-477B-A48F-DE3FE93331AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{B171013B-BE88-46B8-BB3C-6EB369887F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B171013B-BE88-46B8-BB3C-6EB369887F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B171013B-BE88-46B8-BB3C-6EB369887F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D06EBD-7BF3-477B-A48F-DE3FE93331AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D06EBD-7BF3-477B-A48F-DE3FE93331AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D06EBD-7BF3-477B-A48F-DE3FE93331AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D06EBD-7BF3-477B-A48F-DE3FE93331AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
